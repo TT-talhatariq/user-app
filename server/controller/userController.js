@@ -52,7 +52,9 @@ const login = async (req, res) => {
 
     // 3. send result
   } catch (err) {
-    next(err);
+    res.status(404).json({
+      error: "Internal Server Error",
+    });
   }
 };
 

@@ -26,7 +26,7 @@ app.use(cookieParser());
 
 app.use(
   cors({
-    origin: "http://localhost:3001", // Adjust the origin as needed
+    origin: "https://my-first-app-auth.netlify.app", // Adjust the origin as needed
     credentials: true, // This allows cookies to be sent
   })
 );

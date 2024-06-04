@@ -28,16 +28,4 @@ const userSchema = new mongoose.Schema({
   ],
 });
 
-// middleware
-userSchema.pre("save", async function (doc, next) {
-  doc.fullName = doc.firstName + " " + doc.lastName;
-
-  next();
-});
-
-userSchema.post("save", async function (doc, next) {
-  console.log("New user was created or updated", doc);
-  next();
-});
-
 module.exports = mongoose.model("User", userSchema);
